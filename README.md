@@ -1,6 +1,6 @@
 # react-redux-starter
 
-This is a basic strter I made to help on codementor.  It includes a killer webpack setup for ES6 & react, and includes basic setup for redux, redux-form, etc.
+This is a basic starter I made to help on codementor.  It includes a killer webpack setup for ES6 & react, and includes basic setup for redux, redux-form, etc.
 
 ## tooling
 
