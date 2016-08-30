@@ -29,8 +29,6 @@ export default class NavbarComponent extends React.Component {
       </Navbar.Header>
       <div className={menuclasses} onClick={() => this.setState({toggled: false})}>
         <Nav pullRight>
-          <A to='/foo'><NavItem>Foo</NavItem></A>
-          <A to='/bar'><NavItem>Bar</NavItem></A>
         </Nav>
       </div>
     </Navbar>)
