@@ -1,7 +1,7 @@
 import React from 'react'
 import {reduxForm} from 'redux-form'
 import {Link} from 'react-router'
-import {validate as step1validate} from './ContactForm'
+import {validate as step1validate} from './ContactForm1'
 
 // TODO: fix unhandled props
 // https://github.com/erikras/redux-form/issues/1249
@@ -17,11 +17,11 @@ export const validate = values => {
   return Object.assign({}, step1validate(values), errors)
 }
 
-export class AddressForm extends React.Component {
+export class ContactForm2 extends React.Component {
   render () {
     const {fields: {address}, handleSubmit, submitting, pristine, invalid} = this.props
     return (
-      <form novalidate onSubmit={handleSubmit} className='col-md-6'>
+      <form noValidate onSubmit={handleSubmit} className='col-md-6'>
         <div className={'form-group' + ((address.touched && address.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Address</label>
           <input className='form-control' id='name' type='text' placeholder='Address' {...address} />
@@ -41,4 +41,4 @@ export default reduxForm({
   fields: ['address', 'name', 'birthday', 'email'],
   validate,
   destroyOnUnmount: false
-})(AddressForm)
+})(ContactForm2)

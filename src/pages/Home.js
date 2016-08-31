@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/ContactForm1'
 import CarSpec from '../components/CarSpec'
 
 export default class Home extends React.Component {

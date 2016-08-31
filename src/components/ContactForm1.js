@@ -22,11 +22,11 @@ export const validate = values => {
   return errors
 }
 
-export class ContactForm extends React.Component {
+export class ContactForm1 extends React.Component {
   render () {
     const {fields: {name, birthday, email}, handleSubmit, submitting, pristine, invalid} = this.props
     return (
-      <form novalidate onSubmit={handleSubmit} className='col-md-6'>
+      <form noValidate onSubmit={handleSubmit} className='col-md-6'>
         <div className={'form-group' + ((name.touched && name.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Name</label>
           <input className='form-control' id='name' type='text' placeholder='Name' {...name} />
@@ -58,4 +58,4 @@ export default reduxForm({
   // keep values in store for multi-part form
   // see https://github.com/erikras/redux-form/issues/260
   destroyOnUnmount: false
-})(ContactForm)
+})(ContactForm1)

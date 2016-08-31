@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 import store from '../store'
 
-import AddressForm from '../components/AddressForm'
+import AddressForm from '../components/ContactForm2'
 import CarSpec from '../components/CarSpec'
 
 export default class Address extends React.Component {
