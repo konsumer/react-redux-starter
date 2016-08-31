@@ -24,9 +24,9 @@ export const validate = values => {
 
 export class ContactForm extends React.Component {
   render () {
-    const {fields: {name, birthday, email}, handleSubmit, errors, submitting, pristine} = this.props
+    const {fields: {name, birthday, email}, handleSubmit, submitting, pristine, invalid} = this.props
     return (
-      <form onSubmit={handleSubmit} className='col-md-6'>
+      <form novalidate onSubmit={handleSubmit} className='col-md-6'>
         <div className={'form-group' + ((name.touched && name.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Name</label>
           <input className='form-control' id='name' type='text' placeholder='Name' {...name} />
@@ -43,7 +43,7 @@ export class ContactForm extends React.Component {
           <small><div className='help-block'>{birthday.touched && birthday.error}{birthday.touched && !birthday.error && 'Birthday ok.'}&nbsp;</div></small>
         </div>
         <div className='form-group'>
-          <button disabled={submitting || pristine || errors.email || errors.name || errors.birthday} className='btn btn-primary' type='submit'>Next</button>
+          <button disabled={submitting || pristine || invalid} className='btn btn-primary' type='submit'>Next</button>
         </div>
       </form>
     )
