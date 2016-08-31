@@ -8,9 +8,9 @@ import {Link} from 'react-router'
 export const validate = values => {
   const errors = {}
   if (!values.address) {
-    errors.name = 'Required'
+    errors.address = 'Required'
   } else if (values.address.length > 15) {
-    errors.name = 'Must be 15 characters or less'
+    errors.address = 'Must be 15 characters or less'
   }
   return errors
 }
@@ -22,8 +22,8 @@ export class AddressForm extends React.Component {
       <form onSubmit={handleSubmit} className='col-md-6'>
         <div className={'form-group' + ((address.touched && address.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Address</label>
-          <input className='form-control' id='name' type='text' placeholder='First Name' {...address} />
-          <small><div className='help-block'>{address.touched && address.error}{address.touched && !address.error && 'Name ok.'}&nbsp;</div></small>
+          <input className='form-control' id='name' type='text' placeholder='Address' {...address} />
+          <small><div className='help-block'>{address.touched && address.error}{address.touched && !address.error && 'Address ok.'}&nbsp;</div></small>
         </div>
         <div className='form-group'>
           <Link className='btn btn-default' to='/'>Previous</Link>&nbsp;
@@ -36,6 +36,7 @@ export class AddressForm extends React.Component {
 
 export default reduxForm({
   form: 'ContactForm',
-  fields: ['address'],
-  validate
+  fields: ['address', 'name', 'birthday', 'email'],
+  validate,
+  destroyOnUnmount: false
 })(AddressForm)
