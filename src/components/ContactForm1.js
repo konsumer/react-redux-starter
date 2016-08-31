@@ -26,7 +26,7 @@ export class ContactForm1 extends React.Component {
   render () {
     const {fields: {name, birthday, email}, handleSubmit, submitting, pristine, invalid} = this.props
     return (
-      <form noValidate onSubmit={handleSubmit} className='col-md-6'>
+      <form noValidate onSubmit={handleSubmit}>
         <div className={'form-group' + ((name.touched && name.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Name</label>
           <input className='form-control' id='name' type='text' placeholder='Name' {...name} />

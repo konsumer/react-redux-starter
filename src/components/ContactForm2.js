@@ -21,14 +21,14 @@ export class ContactForm2 extends React.Component {
   render () {
     const {fields: {address}, handleSubmit, submitting, pristine, invalid} = this.props
     return (
-      <form noValidate onSubmit={handleSubmit} className='col-md-6'>
+      <form noValidate onSubmit={handleSubmit}>
         <div className={'form-group' + ((address.touched && address.error) ? ' has-error' : '')}>
           <label htmlFor='name'>Address</label>
           <input className='form-control' id='name' type='text' placeholder='Address' {...address} />
           <small><div className='help-block'>{address.touched && address.error}{address.touched && !address.error && 'Address ok.'}&nbsp;</div></small>
         </div>
         <div className='form-group'>
-          <Link className='btn btn-default' to='/'>Previous</Link>&nbsp;
+          <Link className='btn btn-default' to='/'>Back</Link>&nbsp;
           <button disabled={submitting || pristine || invalid} className='btn btn-primary' type='submit'>Next</button>
         </div>
       </form>

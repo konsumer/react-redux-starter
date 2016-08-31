@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CarSpec = props => (
-  <div>
+  <div className='CarSpec'>
     <img src='/car.jpg' width='100%' />
   </div>
 )
