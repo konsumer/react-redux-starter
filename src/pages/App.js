@@ -10,11 +10,6 @@ const App = ({children}) => (
     <section className='container-fluid'>
       {children}
     </section>
-    <footer className='footer'>
-      <div className='container'>
-        <p className='text-muted'>Made with &hearts; by <a href='https://github.com/konsumer'>konsumer</a></p>
-      </div>
-    </footer>
   </div>
 )
 

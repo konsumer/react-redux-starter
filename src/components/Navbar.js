@@ -10,26 +10,13 @@ export const A = ({children, to}) => (
 )
 
 export default class NavbarComponent extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      toggled: false
-    }
-  }
-
   render () {
-    let menuclasses = 'navbar-collapse collapse'
-    if (this.state.toggled) {
-      menuclasses += ' in'
-    }
     return (<Navbar fixedTop>
       <Navbar.Header>
-        <Link to='/'><Navbar.Brand>your site</Navbar.Brand></Link>
-        <Navbar.Toggle onClick={() => this.setState({toggled: !this.state.toggled})} />
+        <Link to='/'><Navbar.Brand>LOGO</Navbar.Brand></Link>
       </Navbar.Header>
-      <div className={menuclasses} onClick={() => this.setState({toggled: false})}>
-        <Nav pullRight>
-        </Nav>
+      <div className='pull-right' style={{lineHeight: '50px'}}>
+        1-800-000-0000
       </div>
     </Navbar>)
   }

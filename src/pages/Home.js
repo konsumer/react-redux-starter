@@ -1,12 +1,21 @@
 import React from 'react'
-import {ButtonToolbar, Button} from 'react-bootstrap'
 
-import { success, info, error } from '../api/notification'
+import ContactForm from '../components/ContactForm'
+import CarSpec from '../components/CarSpec'
 
-const Home = ({children}) => (
-  <div id='Home'>
-   HOME
-  </div>
-)
+export default class Home extends React.Component {
+  onNext (values) {
+    this.props.history.push('/address')
+  }
 
-export default Home
+  render () {
+    return (
+      <div id='Home' className='container'>
+        <div className='row'>
+          <div className='col-sm-6'><CarSpec /></div>
+          <div className='col-sm-6'><ContactForm onSubmit={this.onNext.bind(this)} /></div>
+        </div>
+      </div>
+    )
+  }
+}
