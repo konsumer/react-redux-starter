@@ -12,12 +12,12 @@ export const A = ({children, to}) => (
 export default class NavbarComponent extends React.Component {
   render () {
     return (<Navbar fixedTop>
-      <Navbar.Header>
+      <Navbar.Header style={{width: '100%'}}>
         <Link to='/'><Navbar.Brand>LOGO</Navbar.Brand></Link>
+        <div className='pull-right' style={{lineHeight: '50px'}}>
+          1-800-000-0000
+        </div>
       </Navbar.Header>
-      <div className='pull-right' style={{lineHeight: '50px'}}>
-        1-800-000-0000
-      </div>
     </Navbar>)
   }
 }
