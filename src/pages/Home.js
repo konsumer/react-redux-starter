@@ -1,7 +1,5 @@
 import React from 'react'
 
-import ContactForm from '../components/ContactForm1'
-import CarSpec from '../components/CarSpec'
 
 export default class Home extends React.Component {
   onNext (values) {
@@ -11,10 +9,9 @@ export default class Home extends React.Component {
   render () {
     return (
       <div id='Home' className='container'>
-        <div className='row'>
-          <div className='col-sm-6'><CarSpec /></div>
-          <div className='col-sm-6'><ContactForm onSubmit={this.onNext.bind(this)} /></div>
-        </div>
+        <h2>o hey!</h2>
+        <p>This isn't super-exciting yet. You can make it more exciting by adding some new page-routes to index.js and/or editing pages/Home.js where this text you see is located.</p>
+        <h3>Have fun!</h3>
       </div>
     )
   }
