@@ -3,6 +3,11 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .Notification {
   animation-duration: 0.25s;
   position: absolute;
