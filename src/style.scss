@@ -4,7 +4,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css);
 
 body {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -18,5 +18,22 @@ body {
 
   .close {
     margin-left: 10px;
+  }
+}
+
+/* layout for sticky-footer */
+
+body, #root, #App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#App {
+  & > section {
+    flex: 1;
+    padding: 1em;
+  }
+  footer {
+    text-align: center;
   }
 }
