@@ -1,9 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import store from '../store'
+
 export class Notification extends React.Component {
   onClose () {
     store.dispatch({type: 'notification/hide'})
+    if (this && this.props && this.props.onClose) {
+      this.props.onClose()
+    }
   }
   render () {
     let {type, message, hidden, stay} = this.props
@@ -29,7 +34,7 @@ export class Notification extends React.Component {
     return (<div className={classes.join(' ')}>
       <div className='message-body' role='alert'>
         {message}
-        {stay ? <button onClick={this.onClose} className='close' dataDismiss='alert' ariaLabel='Close'> <span ariaHidden='true'>&times;</span> </button> : null}
+        {stay ? <button onClick={this.onClose.bind(this)} className='close' dataDismiss='alert' ariaLabel='Close'> <span ariaHidden='true'>&times;</span> </button> : null}
       </div>
     </div>)
   }
