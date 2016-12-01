@@ -11,10 +11,10 @@ stories.addDecorator(withKnobs)
 
 stories.add('basic', () => (
   <Notification
-    hidden={boolean('Hidden', false)}
     message={text('Message', 'Here is a message')}
-    stay={boolean('Stay', true)}
     type={select('Type', ['info', 'success', 'error'], 'info')}
+    hidden={boolean('Hidden', false)}
+    stay={boolean('Stay', true)}
     onClose={ action('x-click')}
   />
 ))
