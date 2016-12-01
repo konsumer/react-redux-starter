@@ -1,28 +1,22 @@
 import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
+import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs'
 
 import { Notification } from '../Notification'
 
 console.log(process.env)
 
-storiesOf('Notification', module)
-  .add('success with stay', () => (
-    <Notification hidden={false} message='Here is a message' stay={true} type='success' onClose={ action('x-click')} />
-  ))
-  .add('error with stay', () => (
-    <Notification hidden={false} message='Here is a message' stay={true} type='error' onClose={ action('x-click')} />
-  ))
-  .add('success with no stay', () => (
-    <Notification hidden={false} message='Here is a message' stay={false} type='success' onClose={ action('x-click')} />
-  ))
-  .add('error with no stay', () => (
-    <Notification hidden={false} message='Here is a message' stay={false} type='error' onClose={ action('x-click')} />
-  ))
-  .add('success with hidden and stay', () => (
-    <Notification hidden={true} message='Here is a message' stay={true} type='success' onClose={ action('x-click')} />
-  ))
-  .add('error with hidden and stay', () => (
-    <Notification hidden={true} message='Here is a message' stay={true} type='error' onClose={ action('x-click')} />
-  ))
+const stories = storiesOf('Notification', module)
+stories.addDecorator(withKnobs)
+
+stories.add('basic', () => (
+  <Notification
+    hidden={boolean('Hidden', false)}
+    message={text('Message', 'Here is a message')}
+    stay={boolean('Stay', true)}
+    type={select('Type', ['info', 'success', 'error'], 'info')}
+    onClose={ action('x-click')}
+  />
+))
   
 
