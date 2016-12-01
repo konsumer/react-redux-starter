@@ -1,7 +1,7 @@
-import { configure } from '@kadira/storybook';
+import { configure } from '@kadira/storybook'
 
 function loadStories() {
-  require('../src/components/stories');
+  require('../src/components/stories')
 }
 
-configure(loadStories, module);
+configure(loadStories, module)

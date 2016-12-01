@@ -7,7 +7,7 @@ import { Notification } from '../Notification'
 const stories = storiesOf('Notification', module)
 stories.addDecorator(withKnobs)
 
-stories.add('basic', () => (
+stories.add('display a notification', () => (
   <Notification
     message={text('Message', 'Here is a message')}
     type={select('Type', ['info', 'success', 'error'], 'info')}

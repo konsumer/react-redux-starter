@@ -11,3 +11,4 @@ Everyting uses `package.json` `script` entries.
 * `npm test` - run unit-tests
 * `npm run test:watch` - run unit-tests and watch for changes
 * `npm run build` - make a static build of your app in webroot. You can deploy it anywhere!
+* `npm run storybook` - make a [storybook](https://github.com/storybooks/react-storybook), complete with [knobs](https://github.com/storybooks/storybook-addon-knobs). Add more stories to `src/components/stories/`
