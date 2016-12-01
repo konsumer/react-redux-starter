@@ -5,7 +5,9 @@
     "test": "cross-env NODE_ENV=test mocha --compilers js:babel-register --recursive",
     "test:watch": "npm test -- --watch",
     "start": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --history-api-fallback --hot --inline --no-info --content-base=./webroot",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
   "license": "MIT",
@@ -30,7 +32,8 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dashboard": "^0.1.7",
-    "webpack-dev-server": "^1.15.0"
+    "webpack-dev-server": "^1.15.0",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "react": "^15.3.1",
