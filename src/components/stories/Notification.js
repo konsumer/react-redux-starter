@@ -4,8 +4,6 @@ import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs'
 
 import { Notification } from '../Notification'
 
-console.log(process.env)
-
 const stories = storiesOf('Notification', module)
 stories.addDecorator(withKnobs)
 
