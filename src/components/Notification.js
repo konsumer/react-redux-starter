@@ -3,6 +3,21 @@ import { connect } from 'react-redux'
 
 import store from '../store'
 
+const style = {
+  Notification: {
+    animationDuration: '0.25s',
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    maxWidth: '50vw',
+    zIndex: 10000
+  },
+  close: {
+     marginLeft: 10
+  }
+}
+
+
 export class Notification extends React.Component {
   onClose () {
     store.dispatch({type: 'notification/hide'})
@@ -31,10 +46,10 @@ export class Notification extends React.Component {
     } else {
       classes.push('fadeInRight')
     }
-    return (<div className={classes.join(' ')}>
+    return (<div style={style.Notification} className={classes.join(' ')}>
       <div className='message-body' role='alert'>
         {message}
-        {stay ? <button onClick={this.onClose.bind(this)} className='close' dataDismiss='alert' ariaLabel='Close'> <span ariaHidden='true'>&times;</span> </button> : null}
+        {stay ? <button style={style.close} onClick={this.onClose.bind(this)} className='close' dataDismiss='alert' ariaLabel='Close'> <span ariaHidden='true'>&times;</span> </button> : null}
       </div>
     </div>)
   }
