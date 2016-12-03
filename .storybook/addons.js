@@ -1,2 +1,2 @@
-require('@kadira/storybook-addon-knobs/register')
-require('@kadira/storybook-addon-actions/register')
+import '@kadira/storybook/addons'
+import '@kadira/storybook-addon-knobs/register'

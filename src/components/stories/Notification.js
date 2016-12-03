@@ -1,13 +1,10 @@
 import React from 'react'
 import { storiesOf, action} from '@kadira/storybook'
-import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs'
+import { text, boolean, select } from '@kadira/storybook-addon-knobs'
 
 import { Notification } from '../Notification'
 
-const stories = storiesOf('Notification', module)
-stories.addDecorator(withKnobs)
-
-stories
+storiesOf('Notification', module)
 	.addWithInfo('simple usage', 'Basic usage of Notification', () => (
 	  <Notification
 	  	message={text('Message', 'Here is a message')}
