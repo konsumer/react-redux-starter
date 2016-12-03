@@ -49,7 +49,7 @@ export class Notification extends React.Component {
     return (<div style={style.Notification} className={classes.join(' ')}>
       <div className='message-body' role='alert'>
         {message}
-        {stay ? <button style={style.close} onClick={this.onClose.bind(this)} className='close' dataDismiss='alert' ariaLabel='Close'> <span ariaHidden='true'>&times;</span> </button> : null}
+        {stay ? <button style={style.close} onClick={this.onClose.bind(this)} className='close'> <span>&times;</span> </button> : null}
       </div>
     </div>)
   }
