@@ -13,7 +13,8 @@ const style = {
     zIndex: 10000
   },
   close: {
-     marginLeft: 10
+     marginLeft: 10,
+     outline: 'none'
   }
 }
 

@@ -1,11 +1,10 @@
 import React from 'react'
 import { storiesOf, action} from '@kadira/storybook'
 import { text, boolean, select } from '@kadira/storybook-addon-knobs'
-
 import { Notification } from '../Notification'
 
 const docs = `
-This component handles toast notifications for "info", "success", and "error" type.
+This component handles toast notifications for *info*, *success*, and *error* type.
 `
 
 storiesOf('Notification', module)
