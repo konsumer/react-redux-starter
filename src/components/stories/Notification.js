@@ -15,7 +15,7 @@ storiesOf('Notification', module)
 	    type={select('Type', ['info', 'success', 'error'], 'info')}
 	    hidden={boolean('Hidden', false)}
 	    stay={boolean('Stay', true)}
-	    onClose={ action('click', 'close')}
+	    onClose={ action('close')}
 	  />
 	))
 
