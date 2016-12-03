@@ -55,6 +55,20 @@ export class Notification extends React.Component {
   }
 }
 
+Notification.propTypes = {
+  message: React.PropTypes.string.isRequired,
+  type: React.PropTypes.oneOf(['info', 'success', 'error']),
+  hidden: React.PropTypes.bool,
+  stay: React.PropTypes.bool
+}
+
+Notification.defaultProps = {
+  type: 'info',
+  hidden: false,
+  stay: false
+}
+
+
 const mapStateToProps = function (store) {
   return {
     message: store.notification.message,
