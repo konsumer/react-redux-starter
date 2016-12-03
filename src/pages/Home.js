@@ -10,7 +10,7 @@ const Home = () => (
     <h3>have fun!</h3>
     <p>
       <button className='btn btn-success' onClick={() => success('fun!')}>engage fun</button> &nbsp;
-      <button className='btn btn-danger' onClick={() => error('no more fun!')}>disable fun</button>
+      <button className='btn btn-danger' onClick={() => error('no more fun!', true)}>disable fun</button>
     </p>
     <h3>hipster filler text</h3>
     <div><Link to='/demo'>click here</Link> to check out a dmeo route.</div>
