@@ -6,7 +6,7 @@ import { withKnobs } from '@kadira/storybook-addon-knobs'
 setAddon(infoAddon)
 addDecorator(withKnobs)
 
-function loadStories() {
+function loadStories () {
   require('../src/components/stories')
 }
 

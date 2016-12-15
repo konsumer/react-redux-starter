@@ -8,7 +8,7 @@ const App = ({children}) => (
     <section className='container-fluid'>
       {children}
     </section>
-    <footer>Made with &hearts; by <a href="https://github.com/konsumer">konsumer</a>.</footer>
+    <footer>Made with &hearts; by <a href='https://github.com/konsumer'>konsumer</a>.</footer>
   </div>
 )
 

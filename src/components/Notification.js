@@ -1,8 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import store from '../store'
-
 const style = {
   Notification: {
     animationDuration: '0.25s',
@@ -13,8 +11,8 @@ const style = {
     zIndex: 10000
   },
   close: {
-     marginLeft: 10,
-     outline: 'none'
+    marginLeft: 10,
+    outline: 'none'
   }
 }
 
@@ -31,8 +29,8 @@ export const Notification = ({type, message, hidden, stay, onClose}) => (
   <div style={style.Notification} className={getClasses(type, hidden)}>
     <div className='message-body' role='alert'>
       {message}
-      {stay ? 
-        <button style={style.close} onClick={onClose} className='close'> <span>&times;</span> </button>
+      {stay
+        ? <button style={style.close} onClick={onClose} className='close'> <span>&times;</span> </button>
         : null
       }
     </div>
